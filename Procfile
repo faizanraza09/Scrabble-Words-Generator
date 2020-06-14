@@ -1,1 +1,1 @@
-web: sh setup.ph && streamlit run scrabble_app.py
+web: sh setup.sh && streamlit run scrabble_app.py
