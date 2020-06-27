@@ -34,7 +34,7 @@ def anagrams_helper(lst):
         return new
 
 def anagrams(letters):
-    lst = [word for word in anagrams_helper([i for i in letters]) if word in wordlist]
+    lst = [word for word in anagrams_helper([i.lower() for i in letters]) if word in wordlist]
     points=[]
     for i in lst:
         temp=0
@@ -48,6 +48,6 @@ def anagrams(letters):
 
 if __name__=='__main__':
     st.title('Scrabble Word Generator')
-    rack=st.text_input('Enter your rack of letters: ',max_chars=7)
+    rack=st.text_input('Enter your rack of letters: ',max_chars=8)
     if st.button('Submit') or rack:
         st.dataframe(anagrams(rack))
